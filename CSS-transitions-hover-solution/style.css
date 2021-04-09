@@ -1,0 +1,58 @@
+body {
+    width: 100vw;
+    background-color: black;
+}
+
+img {
+    width: 100%;
+}
+
+
+.image {
+    animation: bounce 2.5s linear infinite;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*Solution for smoothly getting bigger----*/
+    transition: width 0.5s;
+}
+
+/* adding a hover state */
+.image:hover {
+    /* pause animation on hover */
+    animation-play-state: paused;
+
+    /* what width it should transition to on hover */
+    width: 300px;
+}
+
+
+
+
+
+@keyframes bounce {
+    0% {
+        transform: translate(100vw, 50vh);
+    }
+
+    20% {
+        transform: translate(75vw, 25vh);
+    }
+
+    40% {
+        transform: translate(50vw, 50vh);
+    }
+
+    60% {
+        transform: translate(25vw, 25vh);
+    }
+
+    80% {
+        transform: translate(0vw, 50vh);
+    }
+
+    100% {
+        transform: translate(-25vw, 25vh);
+    }
+}
