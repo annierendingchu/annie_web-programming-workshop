@@ -1,0 +1,47 @@
+body {
+    width: 100vw;
+    background-color: black;
+}
+
+img {
+    width: 100%;
+}
+
+
+.image {
+    animation: bounce 2.5s linear infinite;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+
+@keyframes bounce {
+    0% {
+        transform: translate(100vw, 50vh);
+    }
+
+    20% {
+        transform: translate(75vw, 25vh);
+    }
+
+    40% {
+        transform: translate(50vw, 50vh);
+    }
+
+    60% {
+        transform: translate(25vw, 25vh);
+    }
+
+    80% {
+        transform: translate(0vw, 50vh);
+    }
+
+    100% {
+        transform: translate(-25vw, 25vh);
+    }
+}
