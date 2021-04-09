@@ -1,0 +1,62 @@
+
+body {
+    background-color: rgb(245, 146, 203);
+    background-image: url("background-cave.JPG");
+    background-repeat: repeat;
+    background-position: center top;
+    overflow: auto;
+    /* width: auto; */
+    /* background-image: url("foregound.PNG"); */
+
+}
+
+a {
+    float:right;
+    margin-right: 10px;
+}
+
+img.short-grass {
+    width: 300px;
+    height: 200px;
+}
+
+img.bunny-animation {
+    width: 250px;
+    height: 250px;
+}
+
+.bunny {
+    animation: bunny-move 4s linear alternate infinite;
+}
+
+@keyframes bunny-move{
+    0% {
+        transform: translate(-25vw, -50vh);
+
+    }
+    20% {
+        transform: translate(0vw, 50vh);
+    }
+    40% {
+        transform: translate(25vw, -25vh);
+    }
+    60% {
+        transform: translate(50vw, 25vh);
+    }
+    80% {
+        transform: translate(75vw, -50vh);
+    }
+    100% {
+        transform: translate(100vw, 50vh);
+
+    }
+}
+
+.bunny:hover {
+    animation-play-state: paused;
+    width: 500px;
+    height: 500px;
+}
+.grass {
+    display:flexbox;
+}
