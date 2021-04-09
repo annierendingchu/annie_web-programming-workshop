@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    display: flex;
+    background: black;
+    height: 500px;
+    flex-wrap: wrap;
+}
+
+.text-container, .image-container {
+    width: 50%;
+}
+
+.text-container {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text {
+    width: 60%;
+}
+
+.image-container {
+    background: url(img/cover.jpg);
+    background-size: cover;
+    background-position: center;
+    /* overflow: hidden; */
+}
+
+/*
+img {
+    width: 100%;
+} */
+
+@media screen and (max-width: 768px) {
+    .text-container, .image-container {
+        width: 100%;
+    }
+}
