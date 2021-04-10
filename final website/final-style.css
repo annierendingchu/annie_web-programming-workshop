@@ -1,3 +1,14 @@
+/* *{
+    overflow:auto;
+} */
+.grass {
+    display:flex;
+    bottom: 0px;
+    z-index: 31;
+    position:fixed;
+    width:1000vw;
+    overflow:auto;
+}
 
 body {
     background-color: rgb(245, 146, 203);
@@ -5,14 +16,24 @@ body {
     background-repeat: repeat;
     background-position: center top;
     overflow: auto;
-    /* width: auto; */
-    /* background-image: url("foregound.PNG"); */
-
+    width:1000vw;
 }
-
-a {
-    float:right;
+/* 
+.bcgd2 {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-image: url("foreground.PNG");
+    background-position: center top;
+    top:0px;
+    z-index: 30;
+    overflow:auto;
+} */
+h3 {
+    float:center;
     margin-right: 10px;
+    position: fixed;
+
 }
 
 img.short-grass {
@@ -23,10 +44,14 @@ img.short-grass {
 img.bunny-animation {
     width: 250px;
     height: 250px;
+    position: fixed;
+
 }
 
 .bunny {
     animation: bunny-move 4s linear alternate infinite;
+    position: fixed;
+
 }
 
 @keyframes bunny-move{
@@ -56,7 +81,6 @@ img.bunny-animation {
     animation-play-state: paused;
     width: 500px;
     height: 500px;
-}
-.grass {
-    display:flexbox;
+    position: fixed;
+
 }
