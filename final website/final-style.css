@@ -1,40 +1,58 @@
 /* *{
     overflow:auto;
 } */
-.grass {
-    display:flex;
-    bottom: 0px;
-    z-index: 31;
-    position:fixed;
-    width:1000vw;
-    overflow:auto;
-}
+
 
 body {
     background-color: rgb(245, 146, 203);
     background-image: url("background-cave.JPG");
-    background-repeat: repeat;
+    background-repeat: repeat-x;
     background-position: center top;
-    overflow: auto;
-    width:1000vw;
+    overflow-y: hidden;
+    position:static;
+    /* width:1000vw; */
 }
-/* 
-.bcgd2 {
+.background {
+    height: 100%;
+    width: 100%;
+    width:1000vw;
+
+}
+.grass {
+    display:inline-block;
+    bottom: 0;
+    z-index: 31;
+    position:fixed;
+    width:1000vw;
+    white-space: nowrap;
+    overflow-y:scroll;
+}
+
+/* .bcgd2 {
     width: 100vw;
     height: 100vh;
     position: fixed;
     background-image: url("foreground.PNG");
+    background-repeat: repeat-y;
     background-position: center top;
     top:0px;
     z-index: 30;
     overflow:auto;
 } */
 h3 {
-    float:center;
-    margin-right: 10px;
-    position: fixed;
-
+    margin: 10px; 
+    position: absolute;
+    display: flexbox;
+    width: max-content;
+    justify-content: flex-end;
 }
+
+/* a {
+    text-align: center;    
+    overflow: auto;
+    position: absolute;
+    right: 100px;
+} */
 
 img.short-grass {
     width: 300px;
@@ -51,6 +69,7 @@ img.bunny-animation {
 .bunny {
     animation: bunny-move 4s linear alternate infinite;
     position: fixed;
+    display:inline-block;
 
 }
 
