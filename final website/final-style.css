@@ -10,42 +10,176 @@ body {
     background-position: center top;
     overflow-y: hidden;
     position:static;
-    /* width:1000vw; */
 }
 .background {
     height: 100%;
     width: 100%;
     width:1000vw;
-
 }
-.grass {
+
+.grass1 {
+    z-index: 50;
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    left:-50px;
+    background-image: url(short-grass.GIF);
+    background-size: cover;
+}
+.grass1:hover{
+    height:400px;
+    background-image: url(tall-grass.GIF);
+}
+
+.grass2 {
+    z-index: 51;
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    left:210px;
+    background-image: url(short-grass.GIF);
+    background-size: cover;
+}
+.grass2:hover{
+    height:400px;
+    background-image: url(tall-grass.GIF);
+}
+
+.grass3 {
+    z-index: 52;
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    left:470px;
+    background-image: url(short-grass.GIF);
+    background-size: cover;
+}
+.grass3:hover{
+    height:400px;
+    background-image: url(tall-grass.GIF);
+}
+
+.grass4 {
+    z-index: 53;
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    left:730px;
+    background-image: url(short-grass.GIF);
+    background-size: cover;
+}
+.grass4:hover{
+    height:400px;
+    background-image: url(tall-grass.GIF);
+}
+
+.grass5 {
+    z-index: 54;
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    left:990px;
+    background-image: url(short-grass.GIF);
+    background-size: cover;
+}
+.grass5:hover{
+    height:400px;
+    background-image: url(tall-grass.GIF);
+}
+
+.grass6 {
+    z-index: 55;
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    left:1250px;
+    background-image: url(short-grass.GIF);
+    background-size: cover;
+}
+.grass6:hover{
+    height:400px;
+    background-image: url(tall-grass.GIF);
+}
+
+
+/* failed version for the grass */
+/* .grass {
     display:inline-block;
     bottom: 0;
     z-index: 31;
     position:fixed;
-    width:1000vw;
     white-space: nowrap;
-    overflow-y:scroll;
+    
 }
 
-/* .bcgd2 {
+img.short-grass {
+    width: 300px;
+    height: 200px;
+}
+img.short-grass:hover{
+    background-image: url(tall-grass.GIF);
+} */
+
+.bcgd2 {
     width: 100vw;
     height: 100vh;
     position: fixed;
     background-image: url("foreground.PNG");
-    background-repeat: repeat-y;
+    background-repeat: repeat-x;
     background-position: center top;
+    background-size:cover;
     top:0px;
-    z-index: 30;
+    bottom: 0px;
     overflow:auto;
-} */
-h3 {
-    margin: 10px; 
-    position: absolute;
-    display: flexbox;
-    width: max-content;
-    justify-content: flex-end;
 }
+
+
+h3 {
+    z-index: 57;
+    margin: 10px; 
+    width:200px;
+    height:60px;
+    display: inline-block;
+    position:fixed;
+    right:0;
+    background-image: url(bug.png);
+    background-size: cover;
+    animation: carrot-move 1s linear alternate infinite;
+    font-family: 'Press Start 2P', cursive;
+    font-size:2em
+
+}
+
+h3:hover{
+    background-image: url(bug-fast.gif);
+    animation-play-state: paused;
+}
+a{
+    background-color:rgba(255, 410, 0, 0.5);
+}
+@keyframes carrot-move {
+    0% {
+        transform: translate(50vh);
+    }
+
+    100%{
+        transform:translate(0vh);
+    }
+}
+
+
 
 /* a {
     text-align: center;    
@@ -54,52 +188,116 @@ h3 {
     right: 100px;
 } */
 
-img.short-grass {
-    width: 300px;
-    height: 200px;
-}
-
-img.bunny-animation {
+/* img.bunny-angry {
     width: 250px;
     height: 250px;
     position: fixed;
 
 }
 
+img.bunny-angry:hover {
+    background-image: url(hungry.GIF);
+    width: 250px;
+    height: 250px;
+} */
+
 .bunny {
-    animation: bunny-move 4s linear alternate infinite;
+    z-index: 56;
+    width: 250px;
+    height: 250px;
+    animation: bunny-move 5s linear infinite;
     position: fixed;
     display:inline-block;
+    background-image: url(angry.GIF);
+    background-size: cover;
 
 }
 
 @keyframes bunny-move{
     0% {
         transform: translate(-25vw, -50vh);
-
     }
     20% {
+
         transform: translate(0vw, 50vh);
     }
     40% {
+
         transform: translate(25vw, -25vh);
     }
     60% {
+
         transform: translate(50vw, 25vh);
     }
     80% {
+
         transform: translate(75vw, -50vh);
     }
     100% {
-        transform: translate(100vw, 50vh);
-
+        transform: translate(105vw, 50vh);
     }
+
 }
+
+/* @keyframes bunny-move{
+    0% {
+        background-image: url(angry.GIF);
+        transform: translate(-25vw, -50vh);
+    }
+    10% {
+        background-image: url(angry.GIF);
+
+        transform: translate(0vw, 50vh);
+    }
+    20% {
+        background-image: url(angry.GIF);
+
+        transform: translate(25vw, -25vh);
+    }
+    30% {
+        background-image: url(angry.GIF);
+
+        transform: translate(50vw, 25vh);
+    }
+    40% {
+        background-image: url(angry.GIF);
+
+        transform: translate(75vw, -50vh);
+    }
+    50% {
+        background-image: url(angry.GIF);
+        transform: translate(105vw, 50vh);
+    }
+    50.1% {
+        background-image: url(angry-flipped.gif);
+        transform: translate(105vw, 50vh);
+    }
+    60% {
+        background-image: url(angry-flipped.gif);
+        transform: translate(75vw,-50vh);
+    }
+    70% {
+        background-image: url(angry-flipped.gif);
+        transform: translate(50vw, 25vh);
+    }
+    80% {
+        background-image: url(angry-flipped.gif);
+        transform: translate(25vw, -25vh);
+    }
+    90% {
+        background-image: url(angry-flipped.gif);
+        transform: translate(0vw, 50vh);
+    }
+    100% {
+        background-image: url(angry-flipped.gif);
+        transform: translate(-25vw, -50vh);
+    }
+} */
 
 .bunny:hover {
     animation-play-state: paused;
-    width: 500px;
-    height: 500px;
+    background-image: url(hungry.GIF);
     position: fixed;
+    background-size: cover;
 
 }
