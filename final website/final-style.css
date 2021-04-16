@@ -179,7 +179,16 @@ a{
     }
 }
 
-
+.cursor {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+}
 
 /* a {
     text-align: center;    
@@ -212,6 +221,7 @@ img.bunny-angry:hover {
     background-size: cover;
 
 }
+
 
 @keyframes bunny-move{
     0% {
@@ -301,3 +311,5 @@ img.bunny-angry:hover {
     background-size: cover;
 
 }
+
+
