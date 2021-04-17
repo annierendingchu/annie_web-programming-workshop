@@ -42,10 +42,10 @@ $(document).ready(function() {
         $(".cursor").removeClass("hide");
     }
 
-    window.onload = function() {
-        document.getElementById("audioplayer").play();
-    }
-    $(document).ready(function() {
-        $("#audioplayer").get(0).play();
-    });    
+    // window.onload = function() {
+    //     document.getElementById("audioplayer").play();
+    // }
+    // $(document).ready(function() {
+    //     $("#audioplayer").get(0).play();
+    // });    
 })
