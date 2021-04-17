@@ -42,9 +42,10 @@ $(document).ready(function() {
         $(".cursor").removeClass("hide");
     }
 
-    // $(".speech").hover(speechpresent);
-    // function speechpresent() {
-    //     $(".speech").addClass("present");
-    //     setTimeout (speechgone,)
-    // }
+    window.onload = function() {
+        document.getElementById("audioplayer").play();
+    }
+    $(document).ready(function() {
+        $("#audioplayer").get(0).play();
+    });    
 })
