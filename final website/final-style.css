@@ -1,6 +1,6 @@
-/* *{
-    overflow:auto;
-} */
+*{
+    cursor:none;
+}
 
 
 body {
@@ -19,12 +19,12 @@ body {
 
 .grass1 {
     z-index: 50;
-    width: 300px;
+    width: calc(100vw / 6);
     height: 200px;
-    display: inline-block;
-    position: fixed;
-    bottom: 0;
-    left:-50px;
+    /* display: inline-block; */
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* left:-50px; */
     background-image: url(short-grass.GIF);
     background-size: cover;
 }
@@ -35,12 +35,12 @@ body {
 
 .grass2 {
     z-index: 51;
-    width: 300px;
+    width: calc(100vw / 6);
     height: 200px;
-    display: inline-block;
-    position: fixed;
-    bottom: 0;
-    left:210px;
+    /* display: inline-block; */
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* left:210px; */
     background-image: url(short-grass.GIF);
     background-size: cover;
 }
@@ -51,12 +51,12 @@ body {
 
 .grass3 {
     z-index: 52;
-    width: 300px;
+    width: calc(100vw / 6);
     height: 200px;
-    display: inline-block;
-    position: fixed;
-    bottom: 0;
-    left:470px;
+    /* display: inline-block; */
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* left:470px; */
     background-image: url(short-grass.GIF);
     background-size: cover;
 }
@@ -67,12 +67,12 @@ body {
 
 .grass4 {
     z-index: 53;
-    width: 300px;
+    width: calc(100vw / 6);
     height: 200px;
-    display: inline-block;
-    position: fixed;
-    bottom: 0;
-    left:730px;
+    /* display: inline-block; */
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* left:730px; */
     background-image: url(short-grass.GIF);
     background-size: cover;
 }
@@ -83,12 +83,12 @@ body {
 
 .grass5 {
     z-index: 54;
-    width: 300px;
+    width: calc(100vw / 6);
     height: 200px;
-    display: inline-block;
-    position: fixed;
-    bottom: 0;
-    left:990px;
+    /* display: inline-block; */
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* left:990px; */
     background-image: url(short-grass.GIF);
     background-size: cover;
 }
@@ -99,12 +99,12 @@ body {
 
 .grass6 {
     z-index: 55;
-    width: 300px;
+    width: calc(100vw / 6);
     height: 200px;
-    display: inline-block;
-    position: fixed;
-    bottom: 0;
-    left:1250px;
+    /* display: inline-block; */
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* left:1250px; */
     background-image: url(short-grass.GIF);
     background-size: cover;
 }
@@ -113,6 +113,29 @@ body {
     background-image: url(tall-grass.GIF);
 }
 
+.grass7 {
+    z-index: 55;
+    width: calc(100vw / 6);
+    height: 200px;
+    /* display: inline-block; */
+    /* position: fixed; */
+    /* bottom: 0; */
+    left:1510px;
+    background-image: url(short-grass.GIF);
+    background-size: cover;
+}
+.grass7:hover{
+    height:400px;
+    background-image: url(tall-grass.GIF);
+}
+
+.grasses {
+    z-index: 55;
+    display:flex;
+    align-items: flex-end;
+    position:fixed;
+    bottom:0;
+}
 
 /* failed version for the grass */
 /* .grass {
@@ -133,6 +156,7 @@ img.short-grass:hover{
 } */
 
 .bcgd2 {
+    z-index: -5;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -166,9 +190,43 @@ h3:hover{
     background-image: url(bug-fast.gif);
     animation-play-state: paused;
 }
+
+.grave{
+    display: inline-block;
+    position:absolute;
+    left:922vw;
+    bottom:0;
+}
+
+.grave img{
+    width: 600px;
+    height:600px;
+}
+
+.bubble{
+    display: flexbox;
+    position:absolute;
+    left:922vw;
+    bottom:0;
+}
+
+.bubble img{
+    width:600px;
+    height:600px;
+}
+
+.speech {
+    opacity: 0;
+}
+
+.speech:hover{
+    opacity:1;
+}
+
 a{
     background-color:rgba(255, 410, 0, 0.5);
 }
+
 @keyframes carrot-move {
     0% {
         transform: translate(50vh);
@@ -180,15 +238,48 @@ a{
 }
 
 .cursor {
-    position: absolute;
+    position: fixed;
     display: inline-block;
     top: 0;
     left: 0;
     z-index: 1000;
-    width: 10px;
-    height: 10px;
+    width: 100px;
+    height: 100px;
     pointer-events: none;
+    opacity: 1;
 }
+
+.cursor.hide {
+    opacity: 0;
+}
+
+.cursor img{
+    z-index: 1001;
+    width:100%;
+}
+
+.bite{
+    position: fixed;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 80px;
+    height: 80px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.bite img{
+    z-index: 1001;
+    width:100%;
+}
+
+.bite.showing {
+    opacity: 1;
+}
+
 
 /* a {
     text-align: center;    
@@ -303,6 +394,9 @@ img.bunny-angry:hover {
         transform: translate(-25vw, -50vh);
     }
 } */
+.bunny.happy {
+    background-image:url(happy.GIF);
+}
 
 .bunny:hover {
     animation-play-state: paused;
@@ -312,4 +406,7 @@ img.bunny-angry:hover {
 
 }
 
+.bunny.happy:hover {
+    background-image:url(happy.GIF);
+}
 
